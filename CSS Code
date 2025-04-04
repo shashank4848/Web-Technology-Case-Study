@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d2a896;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background: transparent;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #830A75;
+    font-weight: bold;
+}
+
+.chat-btn {
+    background-color: #b60a8d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero {
+    width: 80%;
+    max-width: 1200px;
+    background: linear-gradient(to right, #f8f8f8, #eef2f3);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.intro {
+    font-size: 14px;
+    color: gray;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+
+h1 span {
+    color: #830A75;
+}
+
+h2 {
+    font-size: 28px;
+    color: #830A75;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.hire-btn {
+    background-color: #b60a8d;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.cv-btn {
+    background: #fff;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.cv-btn i {
+    margin-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #000;  
+    font-size: 36px;  
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero-image {
+    position: relative;
+    width: 300px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+}
+
+.circular-text {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: bold;
+    animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-image {
+        margin-top: 20px;
+    }
+}
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenny - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Jenny</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="chat-btn">Let's chat</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="intro">WELCOME TO MY WORLD</p>
+            <h1>Hi I'm <span>Jenny</span></h1>
+            <h2><span class="highlight">Frontend Developer</span></h2>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi rerum cupiditate delectus ullam voluptates.
+            </p>
+            <div class="buttons">
+                <a href="#" class="hire-btn">Hire Me Now !</a>
+                <a href="#" class="cv-btn">Download CV <i class="fas fa-download"></i></a>
+            </div>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+             <a href="#"><i class="fab fa-github"></i></a>
+             <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="https://ticeedu.com/wp-content/uploads/2024/06/666.jpg" alt="Jenny" class="profile-img">
+        </div>
+    </section>
+
+</body>
+</html>
