@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    button {
+      border: none;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 80px;
+      height: 80px;
+      font-size: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #rockButton {
+      background-color: #00aaff;
+      color: white;
+    }
+
+    #paperButton {
+      background-color: #00cc00;
+      color: white;
+    }
+
+    #scissorsButton {
+      background-color: #ff3333;
+      color: white;
+    }
+
+    #newGameButton {
+      background-color: #e0e0e0;
+      color: black;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    #result {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .score {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    
+    .choice-display {
+        margin-top:20px;
+        font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rock - Paper - Scissors</h1>
+
+    <div class="choice-display" id="playerChoice"></div>
+    <div class="choice-display" id="computerChoice"></div>
+    <div id="result"></div>
+
+    <div class="score">Player Score: <span id="playerScore">0</span></div>
+    <div class="score">Computer Score: <span id="computerScore">0</span></div>
+
+    <div>
+      <button id="rockButton">👊 Rock</button>
+      <button id="paperButton">✋ Paper</button>
+      <button id="scissorsButton">✌️ Scissors</button>
+    </div>
+    <button id="newGameButton">New Game</button>
+  </div>
+
+  <script>
+    const playerChoiceDisplay = document.getElementById('playerChoice');
+    const computerChoiceDisplay = document.getElementById('computerChoice');
+    const resultDisplay = document.getElementById('result');
+    const playerScoreDisplay = document.getElementById('playerScore');
+    const computerScoreDisplay = document.getElementById('computerScore');
+    const rockButton = document.getElementById('rockButton');
+    const paperButton = document.getElementById('paperButton');
+    const scissorsButton = document.getElementById('scissorsButton');
+    const newGameButton = document.getElementById('newGameButton');
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    function getComputerChoice() {
+      const choices = ['rock', 'paper', 'scissors'];
+      const randomIndex = Math.floor(Math.random() * choices.length);
+      return choices[randomIndex];
+    }
+
+    function getEmoji(choice) {
+      if (choice === 'rock') return '👊 Rock';
+      if (choice === 'paper') return '✋ Paper';
+      if (choice === 'scissors') return '✌️ Scissors';
+    }
+
+    function determineWinner(player, computer) {
+      if (player === computer) {
+        return "It's a tie!";
+      } else if (
+        (player === 'rock' && computer === 'scissors') ||
+        (player === 'paper' && computer === 'rock') ||
+        (player === 'scissors' && computer === 'paper')
+      ) {
+        playerScore++;
+        return 'You win!';
+      } else {
+        computerScore++;
+        return 'Computer wins!';
+      }
+    }
+
+    function updateScore() {
+      playerScoreDisplay.textContent = playerScore;
+      computerScoreDisplay.textContent = computerScore;
+    }
+
+    function playRound(playerChoice) {
+      const computerChoice = getComputerChoice();
+      const result = determineWinner(playerChoice, computerChoice);
+
+      playerChoiceDisplay.textContent = `PLAYER: ${getEmoji(playerChoice)}`;
+      computerChoiceDisplay.textContent = `Computer: ${getEmoji(computerChoice)}`;
+      resultDisplay.textContent = `You chose ${getEmoji(playerChoice)}, Computer chose ${getEmoji(computerChoice)}. ${result}`;
+
+      updateScore();
+    }
+
+    function resetGame() {
+      playerScore = 0;
+      computerScore = 0;
+      updateScore();
+      playerChoiceDisplay.textContent = '';
+      computerChoiceDisplay.textContent = '';
+      resultDisplay.textContent = '';
+    }
+
+    rockButton.addEventListener('click', () => playRound('rock'));
+    paperButton.addEventListener('click', () => playRound('paper'));
+    scissorsButton.addEventListener('click', () => playRound('scissors'));
+    newGameButton.addEventListener('click', resetGame);
+
+    updateScore();
+  </script>
+</body>
+</html>
