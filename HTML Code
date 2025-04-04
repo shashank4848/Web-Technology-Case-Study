@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sports Club / Clay Target Questionnaire</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+.header {
+text-align: 10px;
+    margin-bottom: 20px;
+}
+
+.header p {
+    margin: 0;
+    font-size: 10px;
+}
+
+.section {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.section h2, .section h3 {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.section table td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    font-weight: normal;
+}
+
+.section table input[type="text"] {
+    width: 98%;
+    padding: 3px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.checkbox-group {
+    display: inline-block;
+}
+
+.checkbox-group label {
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+}
+
+.checkbox-group input[type="radio"] {
+    margin-right: 3px;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <p><b>Capitol Indemnity Corporation</b></p>
+    <p>P.O. Box 5900</p>
+    <p>Madison, WI 53705</p>
+</div>
+
+<div class="section">
+  <h2 style="text-align: center;"><b>SPORTS CLUB / CLAY TARGET QUESTIONNAIRE</b></h2>
+    <p style="text-align: center;">  (Attach to ACORD application)</p>
+    <table>
+        <tr>
+          <td>Applicants Name</td><td><input type="text"></td>
+          <td>Current Carrier</td><td><input type="text" ></td>
+        </tr>
+        <tr>
+          <td>Address</td><td><input type="text"></td>
+          <td>Phone Number</td><td><input type="text"></td>
+        </tr>
+        <tr>
+          <td>City / State / Zip</td><td><input type="text"></td>
+            <td>Fax Number</td><td><input type="text"></td>
+        </tr>
+        <tr><td>Location of Premises (if different)</td><td><input type="text"></td></tr>
+        <tr><td>Claims History</td><td><input type="text"></td></tr>
+        <tr><td>Additional Insureds</td><td><input type="text"></td></tr>
+    </table>
+</div>
+
+<div class="section">
+    <h3>OPERATIONS:</h2>
+    <table>
+        <tr><td># Of Rifle / Pistol Ranges</td><td><input type="text"></td></tr>
+        <tr><td># Of Sporting Clay Stations</td><td><input type="text"></td></tr>
+        <tr><td># Of Trap Houses</td><td><input type="text"></td></tr>
+        <tr><td># Of Skeet Houses</td><td><input type="text"></td></tr>
+    </table>
+</div>
+
+<div class="section">
+    <h3>RANGE DEFINITIONS:</h2>
+    <p>Trap - 1 Trap House = 1 Range</p>
+    <p>Skeet - 1 High and 1 Low = 1 Range</p>
+</div>
+
+<div class="section">
+    <h3>ADMINISTRATION:</h2>
+    <table>
+        <tr>
+            <td>Written safety plan?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="safety_plan" value="yes"> Yes</label>
+                    <label><input type="radio" name="safety_plan" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Rules posted? (submit copy)</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="rules_posted" value="yes"> Yes</label>
+                    <label><input type="radio" name="rules_posted" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Is disciplinary action taken for breaking the rules?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="disciplinary_action" value="yes"> Yes</label>
+                    <label><input type="radio" name="disciplinary_action" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Do you sell alcohol?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="sell_alcohol" value="yes"> Yes</label>
+                    <label><input type="radio" name="sell_alcohol" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Are members restricted from range after alcohol consumption? How enforced?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="alcohol_restriction" value="yes"> Yes</label>
+                    <label><input type="radio" name="alcohol_restriction" value="no"> No</label>
+                </div>
+                <input type="text" placeholder="How enforced?">
+            </td>
+        </tr>
+        <tr>
+            <td>Members only, or, are range passes issued?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="range_passes" value="yes"> Yes</label>
+                    <label><input type="radio" name="range_passes" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Are instructors and range officers NRA certified?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="nra_certified" value="yes"> Yes</label>
+                    <label><input type="radio" name="nra_certified" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Are first aid kits available and are range officers trained in first aid?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="first_aid" value="yes"> Yes</label>
+                    <label><input type="radio" name="first_aid" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Are Safety Glasses required?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="safety_glasses" value="yes"> Yes</label>
+                    <label><input type="radio" name="safety_glasses" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Is Hearing Protection required?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="hearing_protection" value="yes"> Yes</label>
+                    <label><input type="radio" name="hearing_protection" value="no"> No</label>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h3>OUTDOOR RANGE:</h2>
+    <table>
+        <tr>
+            <td>Is premises fenced with locked gates?</td>
+            <td>
+                <div class="checkbox-group">
+                    <label><input type="radio" name="fenced_gates" value="yes"> Yes</label>
+                    <label><input type="radio" name="fenced_gates" value="no"> No</label>
+                </div>
+            </td>
+            <tr>
+    <td>Is perimeter posted "Shooting Range-Danger-Keep Out"?</td>
+    <td>
+        <div class="checkbox-group">
+            <label><input type="radio" name="perimeter_posted" value="yes"> Yes</label>
+            <label><input type="radio" name="perimeter_posted" value="no"> No</label>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>Is each range NRA certified?</td>
+    <td>
+        <div class="checkbox-group">
+            <label><input type="radio" name="nra_certified_range" value="yes"> Yes</label>
+            <label><input type="radio" name="nra_certified_range" value="no"> No</label>
+        </div>
+    </td>
+</tr>
+      </tr>
+        <tr>
+           <td> 
+           <div class="section">
+    <h3>GENERAL</h2>
+    <p>CGE 340 (03-99)</p>
+    <p style="text-align: center;">  1 of 2</p>
+</div>
+</body>
+</html>
